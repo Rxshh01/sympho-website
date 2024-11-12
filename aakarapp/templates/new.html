@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events in java</title>
+</head>
+<body>
+   
+
+    <hr color="blue" size="3">
+    <script lang="javascript">
+        function convert_upper()
+            {
+                var a;
+                a=new_form.lower_name.value
+                new_form.upper_name.value=a.toUpperCase()
+                
+            }
+    </script>
+
+      
+
+    <form name="new_form" method="post" >
+        <p>wil convert key to uppercase</p>
+        lower case <input type="text" name="lower_name">
+        <input type='button' value="press_value" onclick="convert_upper()" >
+        upper case <input type="text" name="upper_name" >
+    </form>
+    <script lang="javascript">
+        function check_contact()
+            {   let num = contact_form.contact_value.value.toString().length
+                
+                if (isNaN(contact_form.contact_value.value)  ) {
+                    alert('please ensure contact number is 10 digit number!')
+                   
+                    
+                } else if(num<9 || num>12) {
+                    alert('please ensure contact number is 10 digit number!')
+                    
+                    
+                
+                } else {
+                    alert('Thank you for registering! and Best of Luck for quiz !' )
+                    
+                    
+                }
+
+            }
+        
+    </script>
+<br> <br>
+    <form name="contact_form" method="post">
+        phone number <input type="text" name="contact_value">
+        <button type="submit" onclick="check_contact()">submit</button>
+
+    </form>
+</body>
+</html>

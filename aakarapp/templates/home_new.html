@@ -1,0 +1,2237 @@
+{% load socialaccount %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+    integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous">
+    </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <link href="/static/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
+  <!-- Template CSS File -->
+
+  <link href="/static/assets/css/main_website.css" rel="stylesheet">
+
+  <title>SYMPOSIUM | PAPER PRESENTATION</title>
+  <title>Aakaar 2024</title>
+  <style>
+    body {
+      overflow-x: hidden;
+    }
+
+    #intro {
+      background-image: url("C:\Users\MADEKA ABHISHEK\OneDrive\Documents\Desktop\Web.jpg");
+      height: 100vh;
+    }
+
+    /* Height for devices larger than 576px */
+    @media (min-width: 992px) {
+      #intro {
+        /* margin-top: -58.59px; */
+      }
+    }
+
+    .navbar .nav-link {
+      color: #000000 !important;
+    }
+
+
+    .accordion-section .panel-default>.panel-heading {
+      border: 2px solid blueviolet;
+      border-radius: 50px;
+      border-color: rgb(194, 119, 221);
+      background: #eaeef2;
+      padding: 0;
+    }
+
+    .accordion-section .panel-default .panel-title a {
+      display: block;
+      text-decoration: none;
+      font-weight: 400;
+      /* font-family:
+    ui-sans-serif
+    system-ui
+    -apple-system
+    BlinkMacSystemFont
+    'Segoe UI'
+    Roboto
+    'Helvetica Neue'
+    Arial
+    'Noto Sans'
+    sans-serif
+    'Apple Color Emoji'
+    'Segoe UI Emoji'
+    'Segoe UI Symbol'
+    'Noto Color Emoji' ; */
+      font-size: 1.1rem;
+      color: #ffffff;
+    }
+
+    .accordion-section .panel-default .panel-title a:after {
+      font-family: "Font Awesome 5 Free";
+      font-style: normal;
+      font-weight: 900;
+      font-size: 28px;
+      content: "\f106";
+      color: rgb(255, 255, 255);
+      float: right;
+      margin-top: 2px;
+      /* position: relative; */
+    }
+
+    .accordion-section .panel-default .panel-title a.collapsed:after {
+      content: "\f107";
+    }
+
+    .accordion-section .panel-default .panel-body {
+      font-size: 1.2rem;
+    }
+
+
+
+
+    /* your CSS goes here*/
+    .title {
+      color: #fa9746;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .title::before {
+      position: absolute;
+      left: -29px;
+      top: 0;
+      height: 20px;
+      width: 20px;
+      transform: rotate(45deg);
+      background-color: rgb(194, 119, 221);
+      /* box-shadow: 0px 4px 4px 0px #aaa; */
+      border-radius: 4px;
+      content: '';
+    }
+
+    .title::after {
+      position: absolute;
+      left: -19px;
+      top: 25px;
+      height: 14px;
+      width: 14px;
+      transform: rotate(45deg);
+      background-color: rgb(194, 119, 221);
+      /* box-shadow: 0px 4px 4px 0px #aaa; */
+      border-radius: 4px;
+      content: '';
+    }
+
+    /* services */
+    .services {
+      /* padding: 40px; */
+      position: relative;
+    }
+
+    .services .square {
+      height: 100px;
+      width: 100px;
+      margin: 30px auto 40px;
+      position: relative;
+      border-radius: 15px;
+      transform: rotate(45deg);
+      padding: 10px;
+      background-color: #d1f2eb;
+      /* box-shadow: 0px 0px 27px 0px #ccc; */
+      /* border: 2px dotted #eaf3fa; */
+    }
+
+    /* .square :hover{
+  background-color: #03989E;
+} */
+    .square i {
+      transform: rotate(315deg);
+      display: block;
+      color: rgb(194, 119, 221);
+      font-size: 40px;
+      padding-top: 17px;
+      padding-right: 16px;
+    }
+
+    .services .square::before {
+      position: absolute;
+      left: -10px;
+      top: 0;
+      width: 1px;
+      height: 100%;
+      /* background-color: #fa9746; */
+      content: '';
+    }
+
+    .services .square::after {
+      position: absolute;
+      left: 50px;
+      top: 66px;
+      width: 1px;
+      height: 88%;
+      /* background-color:#fa9746; */
+      content: '';
+      /* transform: rotate(90deg); */
+    }
+
+    .services .serv .num {
+      width: 60px;
+      height: 60px;
+      background-color: #7499f1;
+      /* box-shadow: 0px 0px 15px 0px #00a9d3; */
+      margin: -38px auto 15px auto;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 30px;
+      padding-top: 7px;
+      border: 1px dashed;
+    }
+
+    .services .serv h5 {
+      color: #fa9746;
+    }
+
+    .services .serv p {
+      color: black;
+    }
+
+    .services .serv hr {
+      width: 30px;
+      border-top: 3px solid rgb(194, 119, 221);
+    }
+
+
+
+
+
+
+
+    .timeline-steps {
+      display: flex;
+      justify-content: center;
+      /* flex-wrap: wrap */
+    }
+
+    .timeline-steps .timeline-step {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      margin: 1rem
+    }
+
+    @media (min-width:768px) {
+      .timeline-steps .timeline-step:not(:last-child):after {
+        content: "";
+        display: block;
+        border-top: .25rem dotted #3b82f6;
+        width: 3.46rem;
+        position: absolute;
+        left: 7.5rem;
+        top: .3125rem
+      }
+
+      .timeline-steps .timeline-step:not(:first-child):before {
+        content: "";
+        display: block;
+        border-top: .25rem dotted #3b82f6;
+        width: 3.8125rem;
+        position: absolute;
+        right: 7.5rem;
+        top: .3125rem
+      }
+    }
+
+    .timeline-steps .timeline-content {
+      width: 10rem;
+      text-align: center
+    }
+
+    .timeline-steps .timeline-content .inner-circle {
+      border-radius: 1.5rem;
+      height: 1rem;
+      width: 1rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #3b82f6
+    }
+
+    .timeline-steps .timeline-content .inner-circle:before {
+      content: "";
+      background-color: #3b82f6;
+      display: inline-block;
+      height: 3rem;
+      width: 3rem;
+      min-width: 3rem;
+      border-radius: 6.25rem;
+      opacity: .5
+    }
+
+
+
+
+    .panel {
+      margin-bottom: 20px;
+      background-color: #fff;
+      /* border: 1px solid transparent; */
+      border-radius: 4px;
+      /* -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05); */
+      /* box-shadow: 0 1px 1px rgba(0,0,0,.05); */
+    }
+
+    /* .profile-information .profile-desk {
+    border-right: 1px solid #ddd;
+    padding-right: 30px;
+} */
+
+    .btn-primary {
+      background-color: rgb(194, 119, 221);
+      border-color: rgb(194, 119, 221);
+      color: #FFFFFF;
+    }
+
+    .act-content {
+      padding: 40px;
+    }
+
+    .recent-act h1 {
+      text-align: center;
+      color: rgb(194, 119, 221);
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .activity-icon {
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      color: #FFFFFF;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      width: 30px;
+      margin: 20px auto 20px;
+      position: relative;
+    }
+
+    .activity-icon.terques {
+      background: rgb(194, 119, 221);
+    }
+
+    .activity-icon {
+      /* background: #C7CBD6; */
+    }
+
+    .recent-act:before {
+      /* background-color: #eeeeee; */
+      bottom: 0;
+      content: "";
+      left: 50%;
+      position: absolute;
+      top: 50px;
+      width: 2px;
+      z-index: 0;
+    }
+
+    .activity-desk {
+      padding: 7px;
+      background: #f2f2f2;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      position: relative;
+      text-align: center;
+    }
+
+    .activity-desk h2 {
+      color: #03989E;
+      font-size: 14px;
+      font-weight: bold;
+      margin: 0 0 10px 0;
+      text-transform: uppercase;
+    }
+
+
+    p {
+      font-size: 1.1rem;
+      font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+      /* font-family: monserrat; */
+    }
+
+
+
+
+
+
+
+
+    /* body {
+    margin-top: 20px;
+} */
+    .timeline_area {
+      position: relative;
+      z-index: 1;
+    }
+
+    .single-timeline-area {
+      position: relative;
+      z-index: 1;
+      /* padding-left: 80px; */
+    }
+
+    @media only screen and (max-width: 575px) {
+      .single-timeline-area {
+        /* padding-left: 100px; */
+      }
+    }
+
+    .single-timeline-area .timeline-date {
+      position: absolute;
+      width: 180px;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -ms-grid-row-align: center;
+      align-items: center;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      padding-right: 60px;
+    }
+
+    @media only screen and (max-width: 575px) {
+      .single-timeline-area .timeline-date {
+        width: 100px;
+      }
+    }
+
+    /* .single-timeline-area .timeline-date::after {
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    content: "";
+    background-color: #ebebeb;
+    top: 0;
+    right: 30px;
+    z-index: 1;
+} */
+    /* .single-timeline-area .timeline-date::before {
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: #355681;
+    content: "";
+    top: 50%;
+    right: 26px;
+    z-index: 5;
+    margin-top: -5.5px;
+} */
+    .single-timeline-area .timeline-date p {
+      margin-bottom: 0;
+      color: #020710;
+      font-size: 13px;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .single-timeline-area .single-timeline-content {
+      position: relative;
+      z-index: 1;
+      padding: 30px 30px 25px;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      margin-top: 15px;
+      -webkit-box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
+      box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
+      border: 1px solid #ebebeb;
+    }
+
+    @media only screen and (max-width: 575px) {
+      .single-timeline-area .single-timeline-content {
+        padding: 20px;
+      }
+    }
+
+    .single-timeline-area .single-timeline-content .timeline-icon {
+      -webkit-transition-duration: 500ms;
+      transition-duration: 500ms;
+      width: 30px;
+      height: 30px;
+      background-color: rgb(194, 119, 221);
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 30px;
+      flex: 0 0 30px;
+      text-align: center;
+      max-width: 30px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+
+    .single-timeline-area .single-timeline-content .timeline-icon svg {
+      color: #ffffff;
+      line-height: 30px;
+    }
+
+    .single-timeline-area .single-timeline-content .timeline-icon i {
+      color: #ffffff;
+      line-height: 30px;
+    }
+
+    .single-timeline-area .single-timeline-content .timeline-text h6 {
+      -webkit-transition-duration: 500ms;
+      transition-duration: 500ms;
+    }
+
+    .single-timeline-area .single-timeline-content .timeline-text p {
+      font-size: 13px;
+      margin-bottom: 0;
+    }
+
+    .single-timeline-area .single-timeline-content:hover .timeline-icon,
+    .single-timeline-area .single-timeline-content:focus .timeline-icon {
+      background-color: #020710;
+    }
+
+    .single-timeline-area .single-timeline-content:hover .timeline-text h6,
+    .single-timeline-area .single-timeline-content:focus .timeline-text h6 {
+      color: #355681;
+    }
+
+
+
+
+    /* header {
+  background: white;
+  display: flex;
+  color: #355681;
+  border-radius: 6px;
+}
+header:before,
+header:after {
+  content: '';
+  margin: auto 1em;
+  border-bottom: solid 6px;
+  flex: 1;
+}
+h1 {
+  position: relative;
+  padding: 0.25em 1em;
+  overflow: hidden;
+  background: linear-gradient(currentcolor, currentcolor) no-repeat top center, linear-gradient(currentcolor, currentcolor) no-repeat bottom center;
+  background-size: calc(100% - 1.65em) 3px;
+}
+h1:before,
+h1:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: solid 3px;
+  border-top: none;
+  border-bottom: none;
+  transform: skew(45deg);
+  border-radius : 3px
+
+}
+
+h1:after {
+  transform: skew(-45deg)
+} */
+
+
+
+    /* h1 {
+	margin: 1em 0 0.5em 0;
+	font-weight: normal;
+	position: relative;
+	text-shadow: 0 -1px rgba(0,0,0,0.6);
+	font-size: 34px;
+	line-height: 40px;
+	background: #03989E;
+	background: #03989E;
+	border: 1px solid #fff;
+	padding: 5px 15px;
+	color: white;
+	border-radius: 0 10px 0 10px;
+	box-shadow: inset 0 0 5px #03989E;
+  font-family: 'Montserrat','Helvetica Neue',Arial,sans-serif;
+} */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+p{
+
+  font-family: "Roboto", sans-serif;
+   
+}
+
+
+h6{
+
+font-family: "Roboto", sans-serif;
+font-weight: 700;
+ 
+}
+
+
+    h1 {
+      position: relative;
+      margin: 1.5em 0 .9em;
+      font-family: Verdana, Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      font-size: 30px;
+      line-height: 1.2;
+      font-weight: bolder;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    h1:before,
+    h1:after {
+      position: absolute;
+      top: 50%;
+      content: '';
+      width: 50%;
+      height: 5px;
+      display: inline-block;
+      background: rgb(194, 119, 221);
+    }
+
+    h1:before {
+      margin-left: calc(-50% - 14px);
+    }
+
+    h1:after {
+      margin-left: 14px;
+    }
+
+
+    @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 24px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      h1 {
+        font-size: 20px;
+      }
+    }
+
+    @media screen and (max-width: 400px) {
+      h1 {
+        font-size: 15px;
+      }
+    }
+
+
+
+
+
+    .md-stepper-horizontal {
+      display: table;
+      width: 100%;
+      margin: 0 auto;
+      background-color: #FFFFFF;
+      /* box-shadow: 0 3px 8px -6px rgba(0,0,0,.50); */
+    }
+
+    .md-stepper-horizontal .md-step {
+      display: table-cell;
+      position: relative;
+      padding: 24px;
+    }
+
+    /* .md-stepper-horizontal .md-step:hover,
+.md-stepper-horizontal .md-step:active {
+	background-color:rgba(0,0,0,0.04);
+} */
+    .md-stepper-horizontal .md-step:active {
+      border-radius: 15% / 75%;
+    }
+
+    .md-stepper-horizontal .md-step:first-child:active {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    .md-stepper-horizontal .md-step:last-child:active {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .md-stepper-horizontal .md-step:hover .md-step-circle {
+      /* background-color:#757575; */
+    }
+
+    .md-stepper-horizontal .md-step:first-child .md-step-bar-left,
+    .md-stepper-horizontal .md-step:last-child .md-step-bar-right {
+      display: none;
+    }
+
+    .md-stepper-horizontal .md-step .md-step-circle {
+      width: 30px;
+      height: 30px;
+      margin: 0 auto;
+      background-color: rgb(194, 119, 221);
+      border-radius: 50%;
+      text-align: center;
+      line-height: 30px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #FFFFFF;
+    }
+
+    .md-stepper-horizontal.green .md-step.active .md-step-circle {
+      background-color: rgb(194, 119, 221);
+    }
+
+    .md-stepper-horizontal.orange .md-step.active .md-step-circle {
+      background-color: rgb(194, 119, 221);
+    }
+
+    .md-stepper-horizontal .md-step.active .md-step-circle {
+      background-color: rgb(194, 119, 221);
+    }
+
+    .md-stepper-horizontal .md-step.done .md-step-circle:before {
+      font-family: 'FontAwesome';
+      font-weight: 100;
+      content: "\f00c";
+    }
+
+    .md-stepper-horizontal .md-step.done .md-step-circle *,
+    .md-stepper-horizontal .md-step.editable .md-step-circle * {
+      display: none;
+    }
+
+    .md-stepper-horizontal .md-step.editable .md-step-circle {
+      -moz-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+    }
+
+    .md-stepper-horizontal .md-step.editable .md-step-circle:before {
+      font-family: 'FontAwesome';
+      font-weight: 100;
+      content: "\f040";
+    }
+
+    .md-stepper-horizontal .md-step .md-step-title {
+      margin-top: 16px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .md-stepper-horizontal .md-step .md-step-title,
+    .md-stepper-horizontal .md-step .md-step-optional {
+      text-align: center;
+      color: rgba(0, 0, 0, .26);
+    }
+
+    .md-stepper-horizontal .md-step.active .md-step-title {
+      font-weight: 600;
+      color: rgba(0, 0, 0, .87);
+    }
+
+    .md-stepper-horizontal .md-step.active.done .md-step-title,
+    .md-stepper-horizontal .md-step.active.editable .md-step-title {
+      font-weight: 600;
+    }
+
+    .md-stepper-horizontal .md-step .md-step-optional {
+      font-size: 12px;
+    }
+
+    .md-stepper-horizontal .md-step.active .md-step-optional {
+      color: rgba(0, 0, 0, .54);
+    }
+
+    .md-stepper-horizontal .md-step .md-step-bar-left,
+    .md-stepper-horizontal .md-step .md-step-bar-right {
+      position: absolute;
+      top: 36px;
+      height: 1px;
+      border-top: 1px solid #DDDDDD;
+    }
+
+    .md-stepper-horizontal .md-step .md-step-bar-right {
+      right: 0;
+      left: 50%;
+      margin-left: 20px;
+    }
+
+    .md-stepper-horizontal .md-step .md-step-bar-left {
+      left: 0;
+      right: 50%;
+      margin-right: 20px;
+    }
+
+
+
+
+
+
+    ul.timeline {
+      list-style-type: none;
+      position: relative;
+    }
+
+    ul.timeline:before {
+      content: ' ';
+      background: #d4d9df;
+      display: inline-block;
+      position: absolute;
+      left: 29px;
+      width: 2px;
+      height: 100%;
+      z-index: 400;
+    }
+
+    ul.timeline>li {
+      margin: 20px 0;
+      padding-left: 20px;
+    }
+
+    ul.timeline>li:before {
+      content: ' ';
+      background: white;
+      display: inline-block;
+      position: absolute;
+      border-radius: 50%;
+      border: 3px solid #355681;
+      left: 20px;
+      width: 20px;
+      height: 20px;
+      z-index: 400;
+    }
+
+
+
+
+
+
+    /* h3 {
+        font-family: sans-serif;
+        margin: 100px auto;
+        color: #228B22;
+        text-align: center;
+        font-size: 30px;
+        max-width: 600px;
+        position: relative;
+      }
+       h3:before {
+        content: "";
+        display: block;
+        width: 130px;
+        height: 5px;
+        background: #03989E;
+        left: 0;
+        top: 50%;
+        position: absolute;
+      }
+h3:after {
+        content: "";
+        display: block;
+        width: 130px;
+        height: 5px;
+        background: #03989E;
+        right: 0;
+        top: 50%;
+        position: absolute;
+      } */
+
+    .intention {
+      /* border: 1px solid blueviolet; */
+      background-color: rgb(251, 250, 252);
+      border-style: inset;
+      border-radius: 3%;
+    }
+
+    .intention:hover {
+      background-color: rgb(218, 91, 218);
+      transition: 150ms;
+    }
+
+
+
+
+    .context {
+      width: 100%;
+      position: absolute;
+      /* top:50vh; */
+
+    }
+
+    .context img {
+      text-align: center;
+      color: #fff;
+      /* font-size: 50px; */
+      z-index: 1000;
+    }
+
+
+    .area {
+      background: white;
+      background: -webkit-linear-gradient(to left, #d1f2eb, #31c3a6);
+      width: 100%;
+      height: 100vh;
+
+
+    }
+
+    .circles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .circles li {
+      position: absolute;
+      display: block;
+      list-style: none;
+      width: 20px;
+      height: 20px;
+      background: rgb(194, 119, 221);
+      animation: animate 25s linear infinite;
+      bottom: -150px;
+
+    }
+
+    .circles li:nth-child(1) {
+      left: 25%;
+      width: 80px;
+      height: 80px;
+      animation-delay: 0s;
+    }
+
+
+    .circles li:nth-child(2) {
+      left: 10%;
+      width: 20px;
+      height: 20px;
+      animation-delay: 2s;
+      animation-duration: 12s;
+    }
+
+    .circles li:nth-child(3) {
+      left: 70%;
+      width: 20px;
+      height: 20px;
+      animation-delay: 4s;
+    }
+
+    .circles li:nth-child(4) {
+      left: 40%;
+      width: 60px;
+      height: 60px;
+      animation-delay: 0s;
+      animation-duration: 18s;
+    }
+
+    .circles li:nth-child(5) {
+      left: 65%;
+      width: 20px;
+      height: 20px;
+      animation-delay: 0s;
+    }
+
+    .circles li:nth-child(6) {
+      left: 75%;
+      width: 110px;
+      height: 110px;
+      animation-delay: 3s;
+    }
+
+    .circles li:nth-child(7) {
+      left: 35%;
+      width: 150px;
+      height: 150px;
+      animation-delay: 7s;
+    }
+
+    .circles li:nth-child(8) {
+      left: 50%;
+      width: 25px;
+      height: 25px;
+      animation-delay: 15s;
+      animation-duration: 45s;
+    }
+
+    .circles li:nth-child(9) {
+      left: 20%;
+      width: 15px;
+      height: 15px;
+      animation-delay: 2s;
+      animation-duration: 35s;
+    }
+
+    .circles li:nth-child(10) {
+      left: 85%;
+      width: 150px;
+      height: 150px;
+      animation-delay: 0s;
+      animation-duration: 11s;
+    }
+
+
+
+    @keyframes animate {
+
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+      }
+
+      100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+      }
+
+    }
+
+    /* https://images.pexels.com/photos/417273/pexels-photo-417273.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 */
+
+
+
+    .logo-header {
+      /* background: linear-gradient(rgba(62, 63, 64, 0.6), rgba(62, 63, 64, 0.6)), url("static/Web.jpg"); */
+      /* background: url(static/web.jpg); */
+      background-size: cover;
+      background-position: center bottom;
+      color: #fff;
+      font-family: 'Nunito', sans-serif;
+      padding-top: 150px;
+      padding-bottom: 100px;
+    }
+
+    .logo-header h1 {
+      font-size: 3rem;
+      font-weight: 300;
+      margin: 0 auto 0.2em auto;
+    }
+
+    .logo-header p {
+      font-size: 1.15rem;
+      width: 80%;
+      margin: 0 auto 2em auto;
+    }
+
+    .logo-header .logo {
+      margin: 0 auto 1em auto;
+    }
+
+    .logo-header .btn {
+      padding: 10px 26px;
+      background-color: #313131;
+      color: #FFF;
+      display: inline-block;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      text-decoration: none;
+      border: solid 2px #313131;
+      border-radius: 2px;
+      -moz-border-radius: 2px;
+      -webkit-border-radius: 2px;
+    }
+
+    .logo-header .btn:hover {
+      color: #FFF;
+      background-color: #1f69ff;
+      border-color: #1f69ff;
+    }
+
+    @media (min-width: 992px) {
+      .logo-header {
+        height: 100vh;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      .logo-header h1 {
+        font-size: 4rem;
+      }
+
+      .logo-header p {
+        width: 60%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-header h1 {
+        font-size: 2.4rem;
+      }
+    }
+
+    .arrange {
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+    }
+
+    .container1 {
+
+
+
+      width: 250px;
+      height: 150px;
+
+
+    }
+
+    .container1:hover>.cards {
+
+      transform: rotatey(180deg);
+    }
+
+    .cards {
+
+      height: 100%;
+      width: 100%;
+      position: relative;
+      transition: transform 1200ms;
+      transform-style: preserve-3d;
+
+    }
+
+    .front,
+    .back {
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      backface-visibility: hidden;
+      border-radius: 20%;
+
+    }
+
+    .front {
+
+      /* background: linear-gradient(to right, #ADD8E6, #4682B4); */
+      /* background: linear-gradient(to right, #87CEEB, #FFC0CB); */
+      border-style: inset;
+      display: flex;
+
+
+
+
+
+    }
+
+    .back {
+
+      background-color: rgb(166, 132, 199);
+      transform: rotateY(180deg);
+      color: white;
+    
+    
+
+
+
+
+    }
+
+    video {
+      object-fit: cover;
+      overflow-clip-margin: content-box;
+      overflow: clip;
+    }
+
+    .box {
+
+      position: relative;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+
+    }
+
+
+    .box video {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    @media (max-width:800px) {
+      .box {
+        min-height: 600px;
+      }
+
+    }
+
+    /* #videoDiv { height: auto; position: relative; margin-top: 4.5%;}
+  .about video {  margin-left: 10%;}
+  #videoMessage { position: absolute;top: 250px;
+      left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  width: 100%;
+  height: 100%;}
+
+  #videoDiv {
+    height: auto;
+    position: relative;
+    margin-top: 20.5%;
+  } */
+
+    @media (max-width: 991px) {
+
+      .navbar-mobile a,
+      .navbar-mobile a:focus {
+        padding: 10px 20px;
+        font-size: 15px;
+        color: #213b52;
+      }
+    }
+
+    .video_player {
+      margin-top: 0%;
+      margin-bottom: 27%;
+
+    }
+
+    .video_player .btn {
+      margin-left: -3%;
+      margin-top: 27%;
+      padding: 10px;
+      background-color: #641187;
+      color: #ffffff00;
+      display: inline-block;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      text-decoration: none;
+      border: solid 2px #313131;
+      border-radius: 2px;
+      -moz-border-radius: 2px;
+      -webkit-border-radius: 2px;
+    }
+
+    .video_player .btn:hover {
+      color: #ffffff00;
+      background-color: #d2d2d2;
+      border-color: rgb(188, 11, 224);
+      transition: all 0.4s;
+
+    }
+
+    .video_player video {
+      margin-bottom: 2%;
+      position: absolute;
+      /* left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: hidden; */
+      z-index: -1;
+    }
+
+    @media(max-width:600px) {
+      .video_player .btn {
+        margin-left: auto;
+        margin-top: 60%;
+        margin-bottom: -23%;
+        width: 100%;
+      }
+    }
+
+    /* @media (min-aspect-ratio: 16/9){
+  .back_video{
+    width: 100%;
+    height: auto;
+  }
+ }
+
+ @media (max-aspect-ratio: 16/9){
+  .back_video{
+    width: auto;
+    height: 100%;
+  }
+ } */
+
+
+#preloader{
+
+  background: #000000 url(https://blog.hubspot.com/hs-fs/hubfs/7a8f8d634013568124e130728834d47a.gif?width=1500&name=7a8f8d634013568124e130728834d47a.gif) no-repeat center center;
+  background-size: 30%;
+  height:100vh ;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+
+}
+
+
+
+  </style>
+
+</head>
+
+<body>
+
+  <div id="preloader"></div>
+
+
+  {% load static %}
+  <nav class="navbar navbar-expand-lg navbar-transparent"
+    style=" margin-top: 0px; margin-bottom: 0; padding-top: 0px; padding-bottom: 0; z-index: 2000; background-color: transparent;">
+    <div class="container"><a href="/paper"> <img
+          src="https://github.com/hvm0901/AakaarStatic/assets/135495501/bf280bb9-6fe3-45e1-8f40-b8066732d86f"
+          width="170px"></a>
+          <!-- <div class="container"><a href="symposium.aakaar.org.in"> <img
+            src="https://user-images.githubusercontent.com/135495501/271797522-ef163998-e499-4ab0-9555-9d4c3b4269eb.png"
+            width="210px"></a> -->
+      <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+        class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+      <div id="navbarSupportedContent" class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active fw-bold"><a href="#about" class="nav-link" style="font-size: 18px; color:black">
+              About </a>
+          </li>
+          <li class="nav-item active fw-bold"><a href="#incentive" class="nav-link"
+              style="font-size: 18px; color:black">
+              Incentives</a></li>
+          <li class="nav-item active fw-bold"><a href="#abstract" class="nav-link" style="font-size: 18px; color:black">
+              Call for Abstract</a></li>
+          <li class="nav-item active fw-bold"><a href="#guidelines" class="nav-link"
+              style="font-size: 18px; color:black">
+              Guidelines</a></li>
+          <li class="nav-item active fw-bold"><a href="#faq" class="nav-link" style="font-size: 18px; color:black"> FAQ
+            </a>
+         
+          <li class="nav-item active fw-bold"><a href="#contact" class="nav-link" style="font-size: 18px; color:black">
+              Contact Us</a>
+          </li>
+        </ul>
+        {% if user.is_authenticated %}
+        <a class="btn"
+          style="background-color:rgb(194, 119, 221); font-weight: 600;  color: rgb(236, 229, 229); margin-left: 10px; margin-bottom: 15px;"
+          href="{% url 'account_logout' %}">Log
+          out</a>
+        {% else %}
+        <a class="btn"
+        style="background-color:rgb(194, 119, 221); font-weight: 600;  color: rgb(236, 229, 229); margin-left: 10px; margin-bottom: 15px;"
+          href="{% provider_login_url 'google' %}">Login</a>
+{% endif %}
+      </div>
+    </div>
+  </nav>
+  <div class="alert alert-success alert-dismissible fade show" role="alert" style="margin-top: 60px;">
+    <strong>Registrations for Paper Presentation are closed</strong>
+    <span class="btn btn-warning" style="margin-left: 32px;">  <!--/submission-->
+      <a href="" style="text-decoration: none; color: #033f47; font-weight: 700;">Registrations Closed</a>
+    </span>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <script>
+    
+</script>
+
+
+
+
+
+  <section class="video_player">
+
+    <video id="video1" width="100%" preload="" autoplay="" muted="" playsinline="" loop="" class="back_video">
+      <source src="https://github.com/hvm0901/AakaarStatic/assets/135495501/63ad3dd7-4bad-46d7-994c-57bda7fcb670" type="video/mp4">
+    </video>
+
+    <script>
+      var video = document.getElementById("myVideo");
+      video.autoplay = true;
+      video.load();
+    </script>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+      {% if user.is_authenticated %}
+      <a class="btn btn-lg"
+        style="background-color: rgb(149, 44, 44); font-weight: 600;  color: rgb(236, 229, 229); border-radius: 10px; "
+        href="">REGISTRATIONS CLOSED</a>
+      {% else %}
+      <a class="btn btn-lg"
+        style="background-color: rgb(149, 44, 44); font-weight: 600;  color: rgb(236, 229, 229); border-radius: 10px; "
+        href="{% provider_login_url 'google' %}">LOGIN</a>
+      {% endif %}
+    </div>
+  </section>
+
+
+
+
+  <!-- <section class="logo-header box">
+    <div class="container h-100"> -->
+  <!-- <div class="row h-100 align-items-center">
+        <div class="col-12 col-md-12 text-center header-content"> -->
+  <!--  <div class="player"> -->
+  <!-- <iframe src="static/Web.sympo.mp4"
+                width="290" height="290" frameborder="0"
+                allowfullscreen="" allow="autoplay" frameborder="0" style="border:none;"></iframe>
+               </div> -->
+
+  <!-- <div id="videoDiv" class="scrolled-offset">
+                <video id="video1" width="100%" preload="" autoplay="" muted="" playsinline="" loop="">
+                <source src="/static/Web.sympo.mp4" type="">
+                </video> -->
+  <!--<div id="videoMessage" class="styling">-->
+  <!--<img src="/static/assets/img/main_website_image/ecotopia1.jpeg" class="img-fluid" id="ecotopia"  alt="" data-aos="flip-right"> -->
+  <!--<h3>Symposium</h3>-->
+  <!--<h3>Dates</h3>-->
+  <!--<h3>18-19th March, 2023</h3>-->
+  <!--</div>-->
+  <!-- </div> -->
+
+
+  <!-- <video id="video1" width="100%" preload="" autoplay="" muted="" playsinline="" loop="" class="back_video">
+            <source src="static/Web.sympo.mp4" type="video/mp4">
+            </video> -->
+
+  <!-- <script>
+            var video = document.getElementById("myVideo");
+            video.autoplay = true;
+            video.load();
+          </script>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            {% if user.is_authenticated %}
+            <a class="btn btn-lg"
+              style="background-color: black; font-weight: 600;  color: rgb(236, 229, 229); border-radius: 5px;"
+              href="registraton_form.html">REGISTER</a> -->
+  <!-- {% else %} -->
+  <!-- <a class="btn btn-lg"
+              style="background-color: black; font-weight: 600; color: rgb(236, 229, 229); border-radius: 5px;"
+              href="{% provider_login_url 'google' %}">LOGIN</a> -->
+  <!-- {% endif %} -->
+  <!-- </div> -->
+  <!-- <h1>Let's make design fast and easy.</h1>
+                 <p>We offer a huge collection of simple, beautiful and ready to use blocks. All blocks can be downloaded free of charge from learnwd.com</p>
+                 <p>
+                    <a class="btn btn-primary rounded" href="https://www.learnwd.com/">Download Now</a>
+                 </p> -->
+  <!-- </div>
+      </div>
+    </div>
+  </section> -->
+
+
+
+  <div id="about" class=" mb-4 py-0" style="background-color: white; margin-top: -10px; padding-top: -16px; ">
+    <div class="container">
+      <header>
+        <h1 class="" style="text-align: center;">About ICES</h1>
+
+      </header>
+      <p data-aos="fade-in" class="aos-init aos-animate" style="text-align: justify; font-size: 1.2rem;">Aakaar IIT
+        Bombay is delighted to introduce the Eighth <span class="fw-bold">International Civil Engineering Symposium
+        </span> (ICES), driven by a noble
+        mission to inspire and support young research enthusiasts in the field of civil engineering. ICES, IIT Bombay,
+        serves as a
+        platform where the emphasis is on fostering collaboration, sharing knowledge, and nurturing innovative
+        ideas.<br>Our aim is to encourage aspiring civil engineering researchers to engage in rigorous research, elevate
+        the discipline, and
+        collectively contribute to its growth. By providing a welcoming space for the exchange of ideas and scientific
+        insights, we hope
+        to facilitate meaningful connections and the development of collaborative research endeavours. We eagerly look
+        forward to
+        uniting and empowering these talented and passionate individuals to work together towards a better future in the
+        realm of civil
+        engineering</p>
+    </div>
+  </div>
+
+
+  <div id="paper" class=" mb-4" style="background-color: white; ">
+    <div class="container">
+      <h1 class="" style="text-align: center;">Paper Presentation</h1>
+      <p data-aos="fade-in" class="aos-init aos-animate" style="text-align: justify; font-size: 1.2rem;">The symposium
+        paper presentation offers a remarkable opportunity for ambitious, young students driven by a passion for
+        research. It's a chance to unveil your work in the presence of distinguished professors, industry pioneers, and
+        fellow students
+        who share your enthusiasm.<br>If you're a dedicated research enthusiast and believe your paper holds something
+        truly exceptional, Aakaar extends a warm
+        invitation to present your research in a formal conference setting. It's your moment to shine among the
+        brightest minds in civil
+        engineering and industry professionals, a stage where your extraordinary work will undoubtedly make a lasting
+        impression.</p>
+    </div>
+  </div>
+
+
+  <div id="motive" class="container">
+    <h1 class="" style="text-align: center;">Our Motive</h1>
+    <div class="row row-cols-1 row-cols-md-4 mb-4 text-center" >
+      <div class="col">
+        <div class="card mb-4 rounded-3" >
+          <div class="card-body intention">
+            <p data-aos="fade-in" class="aos-init aos-animate" style="font-size: 1.2rem;" > Encourage, promote <br> and
+              support <br>Research in Civil Engineering
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col" >
+        <div class="card mb-4 rounded-3">
+          <div class="card-body intention">
+            <p data-aos="fade-in" class="aos-init aos-animate" style="font-size: 1.2rem;">Provide an excellent platform
+              for exchanging new ideas & possible
+              cross-collaboration</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col" >
+        <div class="card mb-4 rounded-3 intention">
+
+          <div class="card-body intention">
+            <p data-aos="fade-in" class="aos-init aos-animate" style="font-size: 1.2rem;">Give exposure to researchers
+              to present their Research Papers at a formal Conference</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 ">
+          <div class="card-body intention">
+            <p data-aos="fade-in" class="aos-init aos-animate" style="font-size: 1.2rem;">Bring together Academia,
+              Industry Professionals, and Research Scholars.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Section: Content-->
+
+
+
+
+  <!-- ################################################## -->
+
+
+
+
+
+
+
+
+  <!-- ################################### -->
+  <div id="incentive" class="services pd container py-0">
+    <h1 class="" style="text-align: center;">Key Incentives</h1>
+
+    <div class="container" data-aos="fade-in" class="aos-init aos-animate" style="text-align: center; ">
+      <!-- <div class="arrange">  -->
+      <div class="row " style="padding-left: 15%;">
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="container1 mb-4 ">
+            <div class="cards ">
+              <div class="front">
+                <div class="image-container">
+                  <img src="https://github.com/hvm0901/AakaarStatic/assets/135495501/98621540-9be3-49b8-95bc-67b203c25044" height="90" alt="...">
+                  <h5 style="text-align: center;">Prizes</h5>
+                </div>
+              </div>
+              <div class="back">
+                <h6 style="margin: 10px; padding: 20px;" >&nbsp;Get a chance to win cash prizes of worth INR 40k&nbsp;</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="col-md-4">
+          <div class="container1 mb-4 ">
+            <div class="cards">
+              <div class="front">
+                <div class="image-container">
+                  <img src="https://github.com/hvm0901/AakaarStatic/assets/135495501/b32e1114-a94b-459c-bc82-5644f8d809db" height="90" alt="...">
+                  <h5 style="text-align: center;">Certification</h5>
+                </div>
+              </div>
+              <div class="back">
+                <h6 style="margin: 10px; padding: 20px;">Get Certified from India's largest Civil Engineering promoting body</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 
+        <div class="col-md-4">
+          <div class="container1 mb-4 ">
+            <div class="cards">
+              <div class="front"><img class="mod"  src="static/certificate-icon.png" height="100"></div>
+             <div class="back"></div>
+            </div>
+          </div>
+        </div> -->
+
+        <div class="col-md-4">
+          <div class="container1 mb-4">
+            <div class="cards">
+              <div class="front">
+                <div class="image-container">
+                  <img src="https://github.com/hvm0901/AakaarStatic/assets/135495501/09a2ac07-ba70-4942-8046-450bf63e9f9f" height="90" alt="...">
+                  <h5 style="text-align: center;">Publication</h5>
+                </div>
+              </div>
+              <div class="back">
+                <h6 style="margin: 10px; padding: 20px;">Top research works will be published in Aakaar Magazine</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="container1 mb-4">
+            <div class="cards">
+              <div class="front">
+                <div class="image-container">
+                  <img src="https://github.com/hvm0901/AakaarStatic/assets/135495501/6d82c8f3-a920-4f5d-a838-433395e525a1" height="90" alt="...">
+                  <h5 style="text-align: center;">Interaction</h5>
+                </div>
+              </div>
+              <div class="back">
+                <h6 style="margin: 10px; padding: 20px;">Chance to interact with IITB professors and industrialists</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-4">
+          <div class="container1 mb-4">
+            <div class="cards">
+              <div class="front">
+                <div class="image-container">
+                  <img src="https://github.com/hvm0901/AakaarStatic/assets/135495501/a1d5ca39-a4ab-4aec-b98f-8722bdd2e55d" height="90" alt="...">
+                  <h5 style="text-align: center;">Resume Point</h5>
+                </div>
+              </div>
+              <div class="back">
+                <h6 style="margin: 10px; padding: 20px;">An International competition will definitely add stars to resume
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+          <div class="col-md-4">
+            <div class="container1 mb-4">
+              <div class="cards">
+                <div class="front">
+                  <div class="image-container">
+                    <img src="https://github.com/hvm0901/AakaarStatic/assets/135495501/d080a5bf-bdd1-474d-81a0-c783c75f0002" height="75" alt="...">
+                    <h5 style="text-align: center;" >Feedback</h5>
+                  </div>
+                </div>
+                <div class="back">
+                  <h6 style="margin: 10px; padding: 20px;">Get reviews from Prominent judging pane</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- </div> -->
+      </div>
+    </div>
+
+
+
+
+
+
+    <!-- ##################################### -->
+
+
+
+
+    <!-- ################################################## -->
+
+    <div id="abstract" class=" mb-4" style="background-color: white;">
+      <div class="container">
+        <h1 class="" style="text-align: center;">CALL FOR ABSTRACTS</h1>
+        <p data-aos="fade-in" class="aos-init aos-animate" data-aos="fade-in" class="aos-init aos-animate"
+          style="text-align: justify; font-size: 1.2rem;">An abstract is a concise version of your research presented in skeletal form, focusing on the essentials of a more significant
+          idea or claim. It should be sufficient for reviewers to discern the nature and significance of your research, the fairness in your
+          approach, and the nature of the results or progress to date.</p>
+      </div>
+    </div>
+
+    <!-- ##################################################### -->
+
+
+
+    <!-- ########################################################### -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="timeline_area section_padding_130">
+
+      <div class="container">
+        <h1 class="" style="text-align: center; ">Abstracts are invited on any of the following topics
+        </h1>
+
+
+        <div class="row">
+          <div class="col-12">
+            <div class="apland-timeline-area">
+              <div class="single-timeline-area timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+                style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+
+                <div class="row">
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
+                      style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                      <div class="timeline-icon"><i class="fa fa-graduation-cap" aria-hidden="true"></i></div>
+                      <div class="timeline-text">
+                        <h6>Construction Management and Methods</h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.5s"
+                      style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                      <div class="timeline-icon"><i class="fa fa-graduation-cap" aria-hidden="true"></i></div>
+                      <div class="timeline-text">
+                        <h6>Concrete Technology and Building Materials</h6>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+
+                  
+
+
+
+
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.7s"
+                      style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;">
+                      <div class="timeline-icon"><i class="fa fa-graduation-cap" aria-hidden="true"></i></div>
+                      <div class="timeline-text">
+                        <h6>Hydraulic and Water Resources Engineering/Ocean Engineering</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="single-timeline-area">
+                <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+                  style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                </div>
+                <div class="row">
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
+                      style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                      <div class="timeline-icon"><i class="fa fa-graduation-cap" aria-hidden="true"></i></div>
+                      <div class="timeline-text">
+                        <h6>Geotechnical Engineering</h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.5s"
+                      style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                      <div class="timeline-icon"><i class="fa fa-graduation-cap" aria-hidden="true"></i></div>
+                      <div class="timeline-text">
+                        <h6> Remote Sensing (GPS/GIS) </h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.5s"
+                      style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                      <div class="timeline-icon"><i class="fa fa-graduation-cap" aria-hidden="true"></i></div>
+                      <div class="timeline-text">
+                        <h6>Structural Engineering</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="single-timeline-area">
+                <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+                  style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                </div>
+                <div class="row">
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
+                      style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                      <div class="timeline-icon"><i class="fa fa-graduation-cap" aria-hidden="true"></i></div>
+                      <div class="timeline-text">
+                        <h6>Transportation Engineering</h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.5s"
+                      style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                      <div class="timeline-icon"><i class="fa fa-graduation-cap" aria-hidden="true"></i></div>
+                      <div class="timeline-text">
+                        <h6>Environmental Engineering
+                        </h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.7s"
+                      style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;">
+                      <div class="timeline-icon"><i class="fa fa-graduation-cap" aria-hidden="true"></i></div>
+                      <div class="timeline-text">
+                        <h6> Architecture, Infrastructure and Urban Science
+                        </h6>
+                      </div>
+                    </div>
+                  </div>
+                  <p style="font-size: 1.1rem;" class="fw-bold">Note: While submitting an Abstract, please make sure to
+                    follow our 'Abstract submission guidelines’. Abstracts not adhering to these guidelines will be
+                    turned down.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ################################################## -->
+
+
+
+
+
+    <div id="guidelines" class="container my-5 text-center">
+      <h1>Guidelines</h1>
+      <div class="">
+        <p style="font-size: 1.2rem;">Strictly follow the guidelines for participation and Abstract submission</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          <a
+            href="https://drive.google.com/file/d/1jMQ6yYM6xZHTrYJ9stG5494Xi1_LDAQq/view?usp=drivesdk"><button
+              type="button" class="btn btn-lg px-4 gap-3"
+              style="background-color: rgb(194, 119, 221); color: white;">Guidelines</button></a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ####################################### -->
+
+
+
+
+    <section id="faq" class="accordion-section clearfix mt-3" aria-label="Question Accordions" style="padding-top: 0px;"
+      id="faq">
+      <div class="container">
+
+        <h1 class="" style="text-align: center;">Frequently Asked Questions</h1>
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" style="margin-top: 10px;">
+          <div class="panel panel-default">
+            <div class="panel-heading p-3 mb-3" role="tab" id="heading0"
+              style="background-color: rgb(113, 69, 129) ;">
+              <h3 class="panel-title">
+                <a class="collapsed text-white fw-bold" title="" data-toggle="collapse" data-parent="#accordion"
+                  href="#collapse0" aria-expanded="true" aria-controls="collapse0">
+                  Who is eligible to participate?
+                </a>
+              </h3>
+            </div>
+            <div id="collapse0" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading0">
+              <div class="panel-body px-3 mb-4">
+                <p class="text-dark">All undergraduate and postgraduate (B.Techs, M.Techs, Dual Degree students, PhDs)
+                  students undertaking research work in the field of civil engineering are eligible to participate.
+
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading p-3 mb-3" role="tab" id="heading1"
+              style="background-color: rgb(113, 69, 129) ;">
+              <h3 class="panel-title">
+                <a class="collapsed text-white fw-bold" role="button" title="" data-toggle="collapse"
+                  data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                  My topic is related to civil engineering, but it is not listed in the specified categories. Am I still
+                  eligible to participate?
+                </a>
+              </h3>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+              <div class="panel-body px-3 mb-4">
+                <p class="text-dark">Yes, you are eligible to participate. Select the category which fits the most to
+                  your field of research.
+
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading p-3 mb-3" role="tab" id="heading2"
+              style="background-color: rgb(113, 69, 129) ;">
+              <h3 class="panel-title">
+                <a class="collapsed text-white fw-bold" role="button" title="" data-toggle="collapse"
+                  data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapse2">
+                  What is the procedure for application?
+                </a>
+              </h3>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+              <div class="panel-body px-3 mb-4">
+                <p class="text-dark">Go through the Abstract submission guidelines carefully. After this, go to the
+                  Registrations section, fill out the form completely and upload the Abstract and Authentication letter
+                  while registering.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading p-3 mb-3" role="tab" id="heading2"
+              style="background-color: rgb(113, 69, 129) ;">
+              <h3 class="panel-title">
+                <a class="collapsed text-white fw-bold" role="button" title="" data-toggle="collapse"
+                  data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
+                  Is it compulsory to attach an authentication letter signed by the faculty/mentor?
+                </a>
+              </h3>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+              <div class="panel-body px-3 mb-4">
+                <p class="text-dark">Yes, it is mandatory to attach the authentication letter, failing which your paper
+                  will be rejected. It serves as proof of your research work.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading p-3 mb-3" role="tab" id="heading3"
+              style="background-color: rgb(113, 69, 129) ;">
+              <h3 class="panel-title">
+                <a class="collapsed text-white fw-bold" role="button" title="" data-toggle="collapse"
+                  data-parent="#accordion" href="#collapse4" aria-expanded="true" aria-controls="collapse4">
+                  Who should attend?
+                </a>
+              </h3>
+            </div>
+            <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+              <div class="panel-body px-3 mb-4">
+                <p class="text-dark">Researchers, technical staff, secondary, vocational or tertiary educators,
+                  professionals from the public and private sectors, or anyone interested in learning about new research
+                  in the field of civil engineering can attend Symposium. Visitors (who are not presenting any research
+                  paper but just want to learn about other research) can register by filling out the 'Visitor Form'.
+                  There is no fee for visitors.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading p-3 mb-3" role="tab" id="heading4"
+              style="background-color: rgb(113, 69, 129) ;">
+              <h3 class="panel-title">
+                <a class="collapsed text-white fw-bold" role="button" title="" data-toggle="collapse"
+                  data-parent="#accordion" href="#collapse5" aria-expanded="true" aria-controls="collapse5">
+                  Can I register for two projects?
+                </a>
+              </h3>
+            </div>
+            <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+              <div class="panel-body px-3 mb-4">
+                <p class="text-dark">Yes, you can register. We highly recommend that one of your projects is a group
+                  project with other students. </p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="panel panel-default">
+            <div class="panel-heading p-3 mb-3" role="tab" id="heading3"
+              style="background-color: rgb(113, 69, 129) ;">
+              <h3 class="panel-title">
+                <a class="collapsed text-white fw-bold" role="button" title="" data-toggle="collapse"
+                  data-parent="#accordion" href="#collapse6" aria-expanded="true" aria-controls="collapse6">
+                  What if my work research is not yet finished? Can I still apply?
+                </a>
+              </h3>
+            </div>
+            <div id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+              <div class="panel-body px-3 mb-4">
+                <p class="text-dark">Yes, students can present research that is still in progress. As long as it has
+                  sufficient content to be displayed in the presentation, it is perfectly acceptable.</p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading p-3 mb-3" role="tab" id="heading3"
+              style="background-color: rgb(113, 69, 129) ;">
+              <h3 class="panel-title">
+                <a class="collapsed text-white fw-bold" role="button" title="" data-toggle="collapse"
+                  data-parent="#accordion" href="#collapse7" aria-expanded="true" aria-controls="collapse7">
+                  How will I receive information and updates about the Symposium?
+                </a>
+              </h3>
+            </div>
+            <div id="collapse7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+              <div class="panel-body px-3 mb-4">
+                <p class="text-dark">Information and updates will be conveyed to you through our Facebook Page,
+                  Instagram, Twitter and Website. Important updates will be sent to you via email, also. It is
+                  recommended to check the website and emails and follow our Facebook page Instagram, and Twitter for
+                  all the updates and reminders. </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading p-3 mb-3" role="tab" id="heading3"
+              style="background-color: rgb(113, 69, 129) ;">
+              <h3 class="panel-title">
+                <a class="collapsed text-white fw-bold" role="button" title="" data-toggle="collapse"
+                  data-parent="#accordion" href="#collapse8" aria-expanded="true" aria-controls="collapse8">
+                  I have submitted the abstract, but I need to make some amendments. What should I do?
+                </a>
+              </h3>
+            </div>
+            <div id="collapse8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+              <div class="panel-body px-3 mb-4">
+                <p class="text-dark">Changes can be made within the stipulated deadline. You should not register again.
+                  Mail your query to any one of the Symposium Managers. We will respond to your query ASAP.</p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading p-3 mb-3" role="tab" id="heading3"
+              style="background-color: rgb(113, 69, 129) ;">
+              <h3 class="panel-title">
+                <a class="collapsed text-white fw-bold" role="button" title="" data-toggle="collapse"
+                  data-parent="#accordion" href="#collapse9" aria-expanded="true" aria-controls="collapse9">
+                  Who reviews the abstracts and determines who can present?
+                </a>
+              </h3>
+            </div>
+            <div id="collapse9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+              <div class="panel-body px-3 mb-4">
+                <p class="text-dark">All the abstracts are sent to our review committee, which comprises Civil
+                  Engineering Department and IIT Bombay's faculty members. They will decide and will select the best
+                  abstracts.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- ############################################################################# -->
+
+
+    <section id="contact" class="page-section" id="team">
+      <div class="container">
+        <div class="text-center">
+          <h1>CONTACT US</h1>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 text-center">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="https://user-images.githubusercontent.com/135495501/281650620-7f17be5a-8f89-4562-af7a-b925ee27dc60.JPG" width="240px" height="255px" alt="..."
+                style="border-bottom: 5px solid  rgb(130, 51, 159); object-fit: cover;">
+              <h4>Piyush Raj</h4>
+              <p class="text-muted">Symposium Manager</p>
+              <a class="btn btn-social mx-2" href="tel:6202506550"><svg xmlns="http://www.w3.org/2000/svg" width="25"
+                  height="25" fill="rgb(130, 51, 159)" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                </svg></a>
+              <a class="btn  btn-social mx-2" href="mailto:piyush.aakaar@gmail.com"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="rgb(130, 51, 159)"
+                  class="bi bi-envelope" viewBox="0 0 16 16">
+                  <path
+                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                </svg></a>
+              <a class="btn btn-social mx-2"
+                href="https://www.linkedin.com/in/piyush-raj-746647247?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="rgb(130, 51, 159)"
+                  class="bi bi-linkedin" viewBox="0 0 16 16">
+                  <path
+                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                </svg></a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 text-center">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="https://github.com/hvm0901/AakaarStatic/assets/135495501/4e88989a-9a62-4abf-9de4-dcf3eec3d2ec" width="240px" height="255px" alt="..."
+                style="border-bottom: 5px solid  rgb(130, 51, 159); object-fit: cover;">
+              <h4>Sanidhya Garg</h4>
+              <p class="text-muted">Symposium Manager</p>
+              <a class="btn btn-social mx-2" href="tel:8949880620"><svg xmlns="http://www.w3.org/2000/svg" width="25"
+                  height="25" fill="rgb(130, 51, 159)" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                </svg></a>
+              <a class="btn  btn-social mx-2" href="mailto:sanidhya.aakaar@gmail.com"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill=" rgb(130, 51, 159)"
+                  class="bi bi-envelope" viewBox="0 0 16 16">
+                  <path
+                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                </svg></a>
+              <a class="btn btn-social mx-2"
+                href="https://www.linkedin.com/in/sanidhya-garg-7a5b8822b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill=" rgb(130, 51, 159)"
+                  class="bi bi-linkedin" viewBox="0 0 16 16">
+                  <path
+                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                </svg></a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- #################################################################### -->
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top container">
+      <div class="col-md-4 d-flex align-items-center">
+        <span class="mb-3 mb-md-0 text-muted">© Aakaar, IIT Bombay 2024</span>
+      </div>
+
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3" style="padding-right: 10px;"><a class="text-muted" href="https://twitter.com/aakaariitb"><svg
+              xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill=" rgb(130, 51, 159)" class="bi bi-twitter"
+              viewBox="0 0 16 16">
+              <path
+                d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+            </svg></a></li>
+        <li class="ms-3" style="padding-right: 10px;"><a class="text-muted"
+            href="https://www.instagram.com/aakaar_iitbombay/"><svg xmlns="http://www.w3.org/2000/svg" width="18"
+              height="18" fill=" rgb(130, 51, 159)" class="bi bi-instagram" viewBox="0 0 16 16">
+              <path
+                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+            </svg></a></li>
+        <li class="ms-3" style="padding-right: 5px;"><a class="text-muted"
+            href="https://www.facebook.com/AakaariitBombay"><svg xmlns="http://www.w3.org/2000/svg" width="18"
+              height="18" fill=" rgb(130, 51, 159)" class="bi bi-facebook" viewBox="0 0 16 16">
+              <path
+                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+            </svg></a></li>
+        <li class="ms-3" style="padding-right: 5px;"><a class="text-muted"
+            href="https://www.linkedin.com/company/aakaariitb/"><svg xmlns="http://www.w3.org/2000/svg" width="18"
+              height="18" fill=" rgb(130, 51, 159)" class="bi bi-linkedin" viewBox="0 0 16 16">
+              <path
+                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+            </svg></a></li>
+      </ul>
+    </footer>
+
+    <script>
+
+var loader = document.getElementById("preloader");
+
+window.addEventListener("load", function(){
+
+  loader.style.display = "none";
+
+})
+
+
+
+    </script>
+
+</body>
+
+</html>
+<!-- <html>
+<body>
+<h1>My Google OAuth Project </h1>
+{% if user.is_authenticated %}
+  <p>Welcome, You are logged in as {{ user.username }}</p>
+{% else %}
+  <a href="{% provider_login_url 'google' %}">Login With Google</a>
+{% endif %}
+</body>
+</html> -->
